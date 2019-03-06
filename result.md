@@ -134,17 +134,17 @@ CycleGAN突破非配對圖像集之間轉換限制，如斑馬與馬可以CycleG
 舉上面例子來說：黑線是正常分類紅藍資料的曲線，但因為Overfitting，訓練出了綠線，因此黃色新資料出現時，原本應該屬於紅色資料分類，卻被分類為藍色資料。
 本次實驗也有發現不一定訓練到最後一個epoch是最好的模型的情形，下面為summer2winter模型在訓練到不同epoch時的成果，使用照片是去年夏天於德國柏林共和國廣場拍攝的照片。
 ![](https://i.imgur.com/lwpOmcG.png)
-圖4-1 epochs:  8/200
+圖4-1 epochs:  8/200  
 ![](https://i.imgur.com/fdGspv6.png)
-圖4-2 epochs: 48/200
+圖4-2 epochs: 48/200  
 ![](https://i.imgur.com/TW05Cd4.png)
-圖4-3 epochs: 88/200
+圖4-3 epochs: 88/200  
 ![](https://i.imgur.com/BN6iLF4.png)
-圖4-4 epochs: 128/200
+圖4-4 epochs: 128/200  
 ![](https://i.imgur.com/zbZQzlX.png)
-圖4-5 epochs: 168/200
+圖4-5 epochs: 168/200  
 ![](https://i.imgur.com/GcqRIu2.png)
-圖4-6 epochs: 200/200
+圖4-6 epochs: 200/200  
 
 從上面一系列圖片，可以發現訓練到200/200時，在清晰度上反而比168/200差，且積雪效果並沒有明顯更加出色，推測這可能表示存在Overfitting的情形。
 
