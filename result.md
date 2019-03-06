@@ -132,7 +132,7 @@ CycleGAN突破非配對圖像集之間轉換限制，如斑馬與馬可以CycleG
 簡單整理一下參考資料，Overfitting顧名思義就為了過度迎合訓練資料做了太多優化，使其無法順利預測或分辨沒出現在訓練資料內的其他資料。
 ![](https://i.imgur.com/OwHTvgO.png)
 舉上面例子來說：黑線是正常分類紅藍資料的曲線，但因為Overfitting，訓練出了綠線，因此黃色新資料出現時，原本應該屬於紅色資料分類，卻被分類為藍色資料。
-本次實驗也有發現不一定訓練到最後一個epoch是最好的模型的情形，下面為summer2winter模型在訓練到不同epoch時的成果，使用照片是去年夏天於德國柏林共和國廣場拍攝的照片。
+本次實驗也有發現不一定訓練到最後一個epoch是最好的模型的情形，下面為summer2winter模型在訓練到不同epoch時的成果，使用照片是去年夏天於德國柏林共和國廣場拍攝的照片。  
 ![](https://i.imgur.com/lwpOmcG.png)
 圖4-1 epochs:  8/200  
 ![](https://i.imgur.com/fdGspv6.png)
