@@ -128,10 +128,15 @@ CycleGAN突破非配對圖像集之間轉換限制，如斑馬與馬可以CycleG
 
 
 ### 4.About Overfitting
+- __關於overfitting__
 什麼是Overfitting?詳請可參考[Overfitting 過度學習– 雞雞與兔兔的工程世界 ...](https://medium.com/%E9%9B%9E%E9%9B%9E%E8%88%87%E5%85%94%E5%85%94%E7%9A%84%E5%B7%A5%E7%A8%8B%E4%B8%96%E7%95%8C/%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92-ml-note-overfitting-%E9%81%8E%E5%BA%A6%E5%AD%B8%E7%BF%92-6196902481bb)
 簡單整理一下參考資料，Overfitting顧名思義就為了過度迎合訓練資料做了太多優化，使其無法順利預測或分辨沒出現在訓練資料內的其他資料。
 ![](https://i.imgur.com/OwHTvgO.png)
-舉上面例子來說：黑線是正常分類紅藍資料的曲線，但因為Overfitting，訓練出了綠線，因此黃色新資料出現時，原本應該屬於紅色資料分類，卻被分類為藍色資料。
+舉上面例子來說：黑線是正常分類紅藍資料的曲線，但因為Overfitting，訓練出了綠線，因此黃色新資料出現時，原本應該屬於紅色資料分類，卻被分類為藍色資料。而如要避免overfitting，可以使用像是dropout、L1/L2 regularization等方法來防止。
+
+- __GAN的overfitting__
+另外GAN可能會出現另一種overfitting：因為Discriminator負責的任務(辨別是否為Generator產生的圖片)較簡單，導致Discriminator可以在初期就輕易的判斷出Generator產生的圖片，最後造成Generator無論如何修正都無法產生出可以騙過Discriminator的圖片，因而讓model停留在一個local minimum。
+
 本次實驗也有發現不一定訓練到最後一個epoch是最好的模型的情形，下面為summer2winter模型在訓練到不同epoch時的成果，使用照片是去年夏天於德國柏林共和國廣場拍攝的照片。  
 ![](https://i.imgur.com/lwpOmcG.png)
 圖4-1 epochs:  8/200  
@@ -153,4 +158,5 @@ CycleGAN突破非配對圖像集之間轉換限制，如斑馬與馬可以CycleG
 1.CHIEN-YI WANG, 2017, 用GAN來實現更全面的圖像風格轉換 CYCLEGAN: UNPAIRED IMAGE-TO-IMAGE TRANSLATION USING CYCLE-CONSISTENT ADVERSARIAL NETWORKS, https://data-sci.info/2017/05/25/cyclegan/
 2.[機器學習ML NOTE]Overfitting 過度學習– 雞雞與兔兔的工程世界 ...
 https://medium.com/.../機器學習-ml-note-overfitting-過度學習-6196902481bb
+
 
