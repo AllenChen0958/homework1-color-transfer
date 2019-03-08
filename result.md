@@ -140,7 +140,7 @@ CycleGAN突破非配對圖像集之間轉換限制，如斑馬與馬可以CycleG
 舉上面例子來說：黑線是正常分類紅藍資料的曲線，但因為Overfitting，訓練出了綠線，因此黃色新資料出現時，原本應該屬於紅色資料分類，卻被分類為藍色資料。而如要避免overfitting，可以使用像是dropout、L1/L2 regularization等方法來防止。
 
 - __GAN的overfitting__
-另外GAN可能會出現另一種overfitting：因為Discriminator負責的任務(辨別是否為Generator產生的圖片)較簡單，導致Discriminator可以在初期就輕易的判斷出Generator產生的圖片，最後造成Generator無論如何修正都無法產生出可以騙過Discriminator的圖片，因而讓model停留在一個local minimum。
+另外GAN可能會出現另一種overfitting：因為Discriminator負責的任務(辨別是否為Generator產生的圖片)較簡單，導致Discriminator可以在初期就輕易的判斷出Generator產生的圖片，最後造成Generator無論如何修正都無法產生出可以騙過Discriminator的圖片，因而讓model停留在一個local minimum。詳見[ICLR 2017 paper](https://openreview.net/pdf?id=Byk-VI9eg)
 
 本次實驗也有發現不一定訓練到最後一個epoch是最好的模型的情形，下面為summer2winter模型在訓練到不同epoch時的成果，使用照片是去年夏天於德國柏林共和國廣場拍攝的照片。  
 ![](https://i.imgur.com/lwpOmcG.png)
