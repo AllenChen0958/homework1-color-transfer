@@ -41,15 +41,20 @@ CycleGAN突破非配對圖像集之間轉換限制，如斑馬與馬可以CycleG
 圖2-1: Server#1 Training過程截圖
 
 
+圖2-2是Server#2 linxu(ubuntu)作業系統上，送入GPN運算，截圖顯示在是訓練完成度11%，訓練結果存入Vangogh2photo。
  ![](https://i.imgur.com/Sjhtc8n.png)
 圖2-2: Server#2 Training過程截圖
-#### 各模型測試結果
+
+#### 各模型訓練結果
+圖2-3右圖Source是清晰的鳳梨與蘋果原圖，經過訓練(Training)出圖2-3左圖Trains鳳梨與蘋果(apple2orange model)的油畫圖片。
 ![](https://i.imgur.com/xmJb9KW.png)
  圖2-3:Apple2Orange model
 
-
+圖2-4右圖Source是清晰的陳朝宗老師原始照片，經過訓練(Training)出圖2-4左圖Trains陳朝宗老師(Realphoto2Vangogh model)油畫圖。
 ![](https://i.imgur.com/Gwmt9NU.png)
  圖2-4: Realphoto2Vangogh model
+ 
+圖2-5右圖Source是清晰的夏季風景圖片，經過訓練(Training)出圖2-5左圖Trains夏季風景圖片(Summer2Winter model)。 
 ![](https://i.imgur.com/2sRWQhC.png)
  圖2-5: Summer2Winter model
 
